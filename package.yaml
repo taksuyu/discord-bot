@@ -1,0 +1,40 @@
+name: discord-bot
+author: Michael Borden
+maintainer: michael@quiet.space
+copyright: Michael Borden 2018
+license: BSD3
+
+github: taksuyu/discord-bot
+
+ghc-options:
+  - -Wall
+
+_exe-ghc-options: &ghc-options
+  - -threaded
+
+default-extensions:
+  - OverloadedStrings
+
+dependencies:
+  - base
+  - discord-hs
+  - lens
+  - marvin
+  - monad-logger
+  - selda
+  - selda-postgresql
+  - selda-sqlite
+  - stm
+  - text
+  - text-conversions
+  - wreq
+
+source-dirs:
+  - src
+
+library:
+
+executables:
+  discord-bot:
+    main: Main.hs
+    ghc-options: &exe-ghc-options
